@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skill Mitra - Mock Interview Platform</title>
+    <link rel="stylesheet" href="C:/Users/Asus/Desktop/Skillmitra/index.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.7.6/lottie.min.js"></script>
+</head>
+<body>
+  
+
+    <!-- Hero Section -->
+    
+    <div class="container">
+
+
+        <div class="hero">
+            <h1>Master Your Mock Interviews</h1>
+            <p style="font-size: 20px;">Get ready for your dream role with Skill Mitra's expert mock interview sessions.</p>
+            <button class="cta-button">Start</button>
+        </div>
+    </div>
+
+    <!-- Lottie animation container -->
+    <div class="container-1">
+        <div id="robotAnimation" class="lottie-container"></div>
+    </div>
+
+    
+
+    <!-- Audio Element -->
+    <audio id="helloAudio" src="./hello.mp3" preload="auto"></audio>
+
+    <script>
+        // Load the first Lottie animation
+        var robotAnimation = lottie.loadAnimation({
+            container: document.getElementById('robotAnimation'), // the DOM element
+            renderer: 'svg',
+            loop: false,
+            autoplay: true,
+            path: 'https://lottie.host/61d09ce5-62a9-4c09-990a-18b4fa4ab4f9/HN0RNWoZg7.json' // First Lottie animation
+        });
+
+        // Add click event listener to the first Lottie animation
+        document.getElementById('robotAnimation').addEventListener('click', function() {
+            var helloAudio = document.getElementById('helloAudio');
+            helloAudio.play(); // Play hello audio when Lottie is clicked
+            
+            helloAudio.onended = function() {
+                // When audio ends, destroy the first animation and load the second one
+                robotAnimation.destroy();
+                lottie.loadAnimation({
+                    container: document.getElementById('robotAnimation'), // the same DOM element
+                    renderer: 'svg',
+                    loop: true, // Loop the second animation
+                    autoplay: true,
+                    path: 'https://lottie.host/229e9fc2-0c83-4b7d-9cac-2015485b754b/jSBkuKzrvA.json' // Second Lottie animation
+                });
+            };
+        });
+    </script>
+
+    <!-- Features Section -->
+    <div class="features">
+        <div class="feature-box">
+            <img src="https://img.icons8.com/ios/100/007bff/teacher.png" alt="Expert Guidance">
+            <h3>Expert Guidance</h3>
+            <p>Get personalized feedback from industry experts to help you improve your interview skills.</p>
+        </div>
+        <div class="feature-box">
+            <img src="https://img.icons8.com/ios/100/007bff/stopwatch.png" alt="Real-Time Simulation">
+            <h3>Real-Time Simulation</h3>
+            <p>Experience real-world interview scenarios with real-time feedback to boost your confidence.</p>
+        </div>
+        <div class="feature-box">
+            <img src="https://img.icons8.com/ios/100/007bff/briefcase.png" alt="Diverse Roles">
+            <h3>Diverse Roles</h3>
+            <p>Prepare for a variety of roles, from tech to business, tailored to your career goals.</p>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>Contact Us: info@skillmitra.com | Address: 123 Mock Interview Ave</p>
+        <div class="social-icons">
+            <a href="#"><img src="https://img.icons8.com/ios-filled/50/ffffff/facebook.png" alt="Facebook"></a>
+            <a href="#"><img src="https://img.icons8.com/ios-filled/50/ffffff/twitter.png" alt="Twitter"></a>
+            <a href="#"><img src="https://img.icons8.com/ios-filled/50/ffffff/linkedin.png" alt="LinkedIn"></a>
+        </div>
+        <p>&copy; 2024 Skill Mitra. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>

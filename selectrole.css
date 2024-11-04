@@ -1,0 +1,62 @@
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    /*background-color: whitesmoke;*/
+    background-image: url(./img2.jpg);
+    color: #333;
+    padding-top: 1%;
+    padding-left: 1%;
+    padding-right: 1%;
+    padding-bottom: 1%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Full height of the viewport */
+    margin: 0;
+     padding: 0;
+}
+.role-selection {
+    
+    justify-content: space-around;
+    display: flex;
+
+    align-items: center;
+    border-radius: 20px;
+    background: linear-gradient(180deg, rgb(26, 88, 26),whitesmoke );
+   /* background-image:url(./img3.jpg);*/
+    /*background: linear-gradient(145deg, #4a32b6, #35353a);*/
+    background-color: #f5f7fa;
+    padding: 1rem 0;
+    text-align: center;
+}
+.role-selection h2 {
+    padding-top: 1%;
+    margin-bottom: 3rem;
+    color: #dfe6ed; /* Dark text for the header */
+    font-weight: bold;
+}
+.role-card {
+    padding: 2rem;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    margin-bottom: 1.5rem;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    background: linear-gradient(180deg, rgb(26, 88, 26),whitesmoke );
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+.role-card:hover {
+    background: linear-gradient(145deg, #b2b20f, #e4ebed); 
+    transform: translateY(-6px); 
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
+    color: white;
+}
+.role-card h4 {
+    font-size: 1.5rem;
+    color: #0b0b0b; /* Bootstrap primary color for headings */
+}
+.role-card p {
+    padding-top: 6%;
+    color: #6c757d; /* Bootstrap secondary text color */
+    font-size: 1rem;
+}

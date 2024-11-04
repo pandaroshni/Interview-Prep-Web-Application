@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Welcome to Skill Mitra</title>
+    
+    <!-- Google Fonts for Comic Sans -->
+    <link href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    
+    <style>
+        body {
+            background-color: #f8f9fa; /* Light background color */
+            color: #343a40; /* Dark text color */
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh; /* Full height of the viewport */
+            margin: 0;
+            text-align: center;
+        }
+        h1 {
+            font-family: 'Comic Sans MS', 'Comic Neue', cursive; /* Comic Sans font with fallback */
+            font-size: 3rem; /* Larger font size */
+            margin-bottom: 20px;
+            color: #ff6347; /* Tomato color for the text */
+            animation: fadeIn 2s forwards; /* Fade-in animation */
+            opacity: 0; /* Hidden initially for animation */
+        }
+        @keyframes fadeIn {
+            to {
+                opacity: 1;
+            }
+        }
+        #lottie-animation {
+            width: 500px; /* Medium size for Lottie animation */
+            height: 500px; /* Proportional height */
+            margin-bottom: 20px;
+        }
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center; /* Center the content */
+            justify-content: center; /* Center the content */
+        }
+    </style>
+    
+    <script src="https://cdn.jsdelivr.net/npm/lottie-web@5.7.6/build/player/lottie.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1 style="font-weight: bold;">Welcome to Skill Mitra!</h1>
+        <div id="lottie-animation"></div>
+    </div>
+
+    <script>
+        // Load the Lottie animation from the provided URL
+        var animation = lottie.loadAnimation({
+            container: document.getElementById('lottie-animation'), // the DOM element
+            renderer: 'svg',
+            loop: false, // Set to false for a one-time animation
+            autoplay: true, // Autoplay the Lottie animation
+            path: 'https://lottie.host/61d09ce5-62a9-4c09-990a-18b4fa4ab4f9/HN0RNWoZg7.json' // Your Lottie JSON URL
+        });
+
+        // Redirect after 3 seconds
+        setTimeout(function() {
+            window.location.href = './index.html'; // Redirect to home page
+        }, 3000); // 3 seconds
+    </script>
+</body>
+</html>

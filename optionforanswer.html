@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Choose Answer Method</title>
+    <link rel="stylesheet" href="./optionforanswer.css">
+    
+</head>
+<body>
+    <div class="container-1">
+
+<div class="container">
+    <h1>How would you like to answer the questions?</h1>
+    <div class="btn-group">
+        <a href="{{ url_for('start_interview', answer_mode='text', role=request.args.get('role')) }}" class="btn">Answer by Typing</a>
+        <a href="{{ url_for('start_interview', answer_mode='voice', role=request.args.get('role')) }}" class="btn">Answer by Speaking</a>
+    </div>
+</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,41 @@
+body {
+    font-family: Arial, sans-serif;
+}
+
+.hero {
+    background-color: #f8f9fa;
+    padding: 5rem 0;
+    text-align: center;
+}
+
+.features {
+    padding: 4rem 0;
+    text-align: center;
+}
+
+.footer {
+    background-color: #343a40;
+    padding: 2rem 0;
+    color: white;
+    text-align: center;
+}
+
+.footer .social-icons a {
+    margin: 0 10px;
+    color: white;
+    font-size: 20px;
+}
+
+.role-selection {
+    padding: 5rem 0;
+    text-align: center;
+}
+
+.role-card {
+    transition: all 0.3s ease;
+}
+
+.role-card:hover {
+    background-color: #f8f9fa;
+    transform: scale(1.02);
+}
